@@ -26,18 +26,30 @@ struct ConfigView: View {
 			Text(String(format: "%.2fx", scale / 50))
 			Spacer(minLength: 10)
 			
-			Toggle("Allow Notch to be moved and dragged", isOn: $movable).onChange(of: movable) {
-				NotchWindow.allowMoving = $0
-				NotchWindow.singleton?.refreshNotch()
-			}
-			Toggle("Show Notch on all Spaces", isOn: $allSpaces).onChange(of: allSpaces) {
-				NotchWindow.showOnAllSpaces = $0
-				NotchWindow.singleton?.refreshNotch()
-			}
-			Toggle("Hide Dock icon", isOn: $hideDock).onChange(of: hideDock) {
-				NotchWindow.showInDock = !$0
-				NotchWindow.singleton?.refreshNotch()
-			}
+			Toggle("Allow Notch to be moved and dragged", isOn: Binding(
+				get: { movable },
+				set: {
+					movable = $0
+					NotchWindow.allowMoving = $0
+					NotchWindow.singleton?.refreshNotch()
+				}
+			))
+			Toggle("Show Notch on all Spaces", isOn: Binding(
+				get: { allSpaces },
+				set: {
+					allSpaces = $0
+					NotchWindow.showOnAllSpaces = $0
+					NotchWindow.singleton?.refreshNotch()
+				}
+			))
+			Toggle("Hide Dock icon", isOn: Binding(
+				get: { hideDock },
+				set: {
+					hideDock = $0
+					NotchWindow.showInDock = !$0
+					NotchWindow.singleton?.refreshNotch()
+				}
+			))
 		}
 		
 		.scaledToFit()
