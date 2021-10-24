@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F480EC1D2723CAED00F97D64 /* TheNotchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480EC1C2723CAED00F97D64 /* TheNotchApp.swift */; };
-		F480EC1F2723CAED00F97D64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480EC1E2723CAED00F97D64 /* ContentView.swift */; };
+		F480EC1F2723CAED00F97D64 /* NotchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480EC1E2723CAED00F97D64 /* NotchView.swift */; };
 		F480EC212723CAEF00F97D64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F480EC202723CAEF00F97D64 /* Assets.xcassets */; };
 		F480EC242723CAEF00F97D64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F480EC232723CAEF00F97D64 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		F480EC192723CAED00F97D64 /* TheNotch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheNotch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F480EC1C2723CAED00F97D64 /* TheNotchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheNotchApp.swift; sourceTree = "<group>"; };
-		F480EC1E2723CAED00F97D64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F480EC1E2723CAED00F97D64 /* NotchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchView.swift; sourceTree = "<group>"; };
 		F480EC202723CAEF00F97D64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F480EC232723CAEF00F97D64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F480EC252723CAEF00F97D64 /* TheNotch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheNotch.entitlements; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				F480EC1C2723CAED00F97D64 /* TheNotchApp.swift */,
-				F480EC1E2723CAED00F97D64 /* ContentView.swift */,
+				F480EC1E2723CAED00F97D64 /* NotchView.swift */,
 				F480EC202723CAEF00F97D64 /* Assets.xcassets */,
 				F480EC252723CAEF00F97D64 /* TheNotch.entitlements */,
 				F480EC222723CAEF00F97D64 /* Preview Content */,
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F480EC1F2723CAED00F97D64 /* ContentView.swift in Sources */,
+				F480EC1F2723CAED00F97D64 /* NotchView.swift in Sources */,
 				F480EC1D2723CAED00F97D64 /* TheNotchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
