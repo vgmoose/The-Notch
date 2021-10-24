@@ -2,9 +2,9 @@ import SwiftUI
 
 struct NotchView: View {
     var body: some View {
-		RoundedRectangle(cornerRadius: 10)
+		RoundedRectangle(cornerRadius: CGFloat(NotchWindow.notchHeight) / 4.0)
 			.fill(Color.black)
-			.frame(width: 130, height: 30)
+			.frame(width: CGFloat(NotchWindow.notchWidth), height: CGFloat(NotchWindow.notchHeight))
     }
 }
 
