@@ -12,7 +12,7 @@ struct ConfigView: View {
 	var body: some View {
 		VStack {
 			// For adjusting the overall scale
-			Text("Relative overall notch size in percent")
+			Text("Notch size multiplier")
 			Slider(
 				value: $scale,
 				in: 25...75,

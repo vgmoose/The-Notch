@@ -13,7 +13,8 @@ struct TheNotchApp: App {
     var body: some Scene {
         WindowGroup {
             ConfigView()
-				.padding(10)
+				.padding(20)
+				.frame(width: 450, height: 200)
         }
 	}
 }
