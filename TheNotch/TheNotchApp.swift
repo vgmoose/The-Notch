@@ -1,11 +1,9 @@
 import SwiftUI
 
-var displayFrame = NSRect(x: 0, y: 0, width: 10, height: 10)
-
 final class AppDelegate: NSObject, NSApplicationDelegate {
-	func applicationDidFinishLaunching(_ notification: Notification){
+	func applicationDidFinishLaunching(_ notification: Notification) {
 		NotchWindow().makeKeyAndOrderFront(self)
-		NSApp.windows.first?.makeKeyAndOrderFront(self)
+		NSApp.windows.first?.makeKeyAndOrderFront(true)
 	}
 }
 

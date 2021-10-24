@@ -10,8 +10,10 @@ class NotchWindow : NSWindow
 	static var notchWidth = defaultNotchWidth
 	
 	static var singleton: NotchWindow? = nil
+	
 	static var allowMoving = false
 	static var showOnAllSpaces = true
+	static var showInDock = true
 	
 	override init(contentRect: NSRect, styleMask style: NSWindow.StyleMask, backing backingStoreType: NSWindow.BackingStoreType, defer flag: Bool)
 	{
@@ -33,7 +35,7 @@ class NotchWindow : NSWindow
 		window.standardWindowButton(.zoomButton)?.isHidden = true
 		window.standardWindowButton(.miniaturizeButton)?.isHidden = true
 		window.standardWindowButton(.closeButton)?.isHidden = true
-	
+			
 		refreshNotch()
 	}
 	
@@ -53,6 +55,16 @@ class NotchWindow : NSWindow
 		
 		let notchWidth = NotchWindow.notchWidth
 		let notchOffset = 10
+		
+		NSApp.setActivationPolicy(NotchWindow.showInDock ? .regular : .accessory)
+		
+		if !NotchWindow.showInDock {
+			// if we aren't showing in the dock, it has to remain clickable
+			self.ignoresMouseEvents = false
+			
+			// always show preferences, there's no other entrypoint
+			NSApp.activate(ignoringOtherApps: true)
+		}
 		
 		if let screen = self.screen {
 			let frame = screen.frame
