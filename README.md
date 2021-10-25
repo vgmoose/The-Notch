@@ -8,7 +8,9 @@ Each year when Apple releases a new Macbook, thousands of consumers around the g
 
 Want to know what model my Mac is? You'll have to look closely at my escape key situation, test out the keyboard, or start sizing up the ports on the sides. Or at least that's how things used to be. The new line of Macbook Pros has changed the game. Now at a glance, even the most average iPhone-owning non-Mac-having layperson will know immediately the situation with your computer. And they'll know it's out of date. No notch? Even the iPhone has a notch!
 
-There's no hiding it now. So instead, here's a simple solution. It will buy you some time but it won't last forever. You know you're going to have to get one of those fancy Apple Silicon laptops eventually. Unless you already got the M1 Macbook Pro, in which case you may need this app more than the rest of us. Kind of feels like if Apple knew they were about to release a totally new MBP form factor, they could've waited to put their new chips in it. There's probably nothing to read into there.
+There's no hiding it now. So instead, here's a simple solution. It will buy you some time but it won't last forever. You know you're going to have to get one of those fancy Apple Silicon laptops eventually. Unless you already got the M1 Macbook Pro, in which case you may need this app more than the rest of us!
+
+(If you're actually trying to sell this effect, you may also need a [keyboard cover](https://i.imgur.com/mO2WU7O.png), cause that changed too).
 
 ## Download
 Download the app from the [Releases page](https://github.com/vgmoose/The-Notch/releases)!
