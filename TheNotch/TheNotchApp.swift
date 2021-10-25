@@ -40,5 +40,32 @@ class TheNotchApp: NSApplication, NSApplicationDelegate {
 
 		self.window = window
 		TheNotchApp.singleton = self
+		
+		// set up menu bar and quit button
+		// https://stackoverflow.com/a/46348417
+		NSApp.setActivationPolicy(.regular)
+		let menubar = NSMenu()
+		let appMenuItem = NSMenuItem()
+		menubar.addItem(appMenuItem)
+		NSApp.mainMenu = menubar
+		let appMenu = NSMenu()
+		let appName = ProcessInfo.processInfo.processName
+		let quitTitle = "Quit " + appName
+		let quitMenuItem = NSMenuItem.init(title:quitTitle,
+		  action:#selector(NSApplication.terminate),keyEquivalent:"q")
+		appMenu.addItem(quitMenuItem);
+		appMenuItem.submenu = appMenu;
+		
+		// react to resolution changes too
+		// https://stackoverflow.com/a/52071507
+		NotificationCenter.default.addObserver(
+		forName: NSApplication.didChangeScreenParametersNotification,
+		   object: NSApplication.shared,
+		   queue: OperationQueue.main
+		) {
+			notification -> Void in
+			NotchWindow.singleton?.refreshNotch()
+			print("screen parameters changed", NotchWindow.singleton)
+		}
 	}
 }

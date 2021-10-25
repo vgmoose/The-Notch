@@ -18,8 +18,7 @@ struct ConfigView: View {
 				in: 25...75,
 				step: 5,
 				onEditingChanged: { editing in
-					NotchWindow.notchHeight = Int(Double(NotchWindow.defaultNotchHeight) * (scale / 50.0))
-					NotchWindow.notchWidth = Int(Double(NotchWindow.defaultNotchWidth) * (scale / 50.0))
+					NotchWindow.scale = (scale / 50.0)
 					NotchWindow.singleton?.refreshNotch()
 				}
 			)
